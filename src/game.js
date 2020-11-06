@@ -1,7 +1,3 @@
-import "./styles.css";
-
-document.getElementById("board").innerHTML = ``;
-
 var count = 0;
 
 //the reference for the body
