@@ -1,11 +1,10 @@
 var count = 0;
+var table = document.createElement("table");
 
 //the reference for the body
 var board = document.getElementById("board");
 
 function createTable() {
-  var table = document.createElement("table");
-
   // create rows
   for (var r = 0; r < 5; r++) {
     var t_row = table.insertRow();
@@ -126,7 +125,7 @@ function checkWin(table) {
         if (xo[i] === "O") {
           alert("Player 2 won!");
         }
-        clearTable(table);
+        clearTable();
       }
     }
   }
@@ -147,11 +146,11 @@ function checkDraw(table) {
   }
   if (draw_count === 25) {
     alert("It's a draw!");
-    clearTable(table);
+    clearTable();
   }
 }
 
-function clearTable(table) {
+function clearTable() {
   for (var t = 0; t < table.rows.length; t++) {
     for (var i = 0; i < table.rows[t].cells.length; i++) {
       table.rows[t].cells[i].innerHTML = "";
